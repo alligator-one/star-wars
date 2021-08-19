@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StarWars App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container m-5">
+    <ul class="nav nav-tabs" id="myTab" role="tablist"> <!-- Tabs -->
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="report-tab" data-bs-toggle="tab" data-bs-target="#report" type="button"
+                    role="tab" aria-controls="report" aria-selected="true">Report
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="persons-tab" data-bs-toggle="tab" data-bs-target="#persons" type="button"
+                    role="tab" aria-controls="persons" aria-selected="false">Persons
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="starships-tab" data-bs-toggle="tab" data-bs-target="#starships" type="button"
+                    role="tab" aria-controls="starships" aria-selected="false">Starships
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="btn btn-primary" id="update" type="button" onclick="update()">Update</button> <!-- Update button -->
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="report" role="tabpanel" aria-labelledby="report-tab"> <!-- Report tab -->
+            <div class="input-group m-3 w-25">
+                <input type="number" class="form-control" aria-label="Count of results" aria-describedby="report"
+                       value="10"
+                       id="report-count">
+                <button class="btn btn-primary" type="button" id="report-button" onclick="report()">Generate report
+                </button>
+            </div>
+            <div id="report-contents"></div>
+        </div>
+        <div class="tab-pane fade" id="persons" role="tabpanel" aria-labelledby="persons-tab"> <!-- Persons tab -->
+            <div class="input-group m-3 w-25">
+                <input type="number" class="form-control" aria-label="Count of results" aria-describedby="report"
+                       value="10"
+                       id="person-count">
+                <button class="btn btn-primary" type="button" id="person-button" onclick="persons()">Get persons
+                </button>
+            </div>
+            <div id="person-contents"></div>
+        </div>
+        <div class="tab-pane fade" id="starships" role="tabpanel" aria-labelledby="starships-tab"> <!-- Starships tab -->
+            <div class="input-group m-3 w-25">
+                <input type="number" class="form-control" aria-label="Count of results" aria-describedby="report"
+                       value="10"
+                       id="starship-count">
+                <button class="btn btn-primary" type="button" id="starship-button" onclick="starships()">Generate report
+                </button>
+            </div>
+            <div id="starship-contents"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
