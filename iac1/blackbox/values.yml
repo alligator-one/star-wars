@@ -1,0 +1,9 @@
+serviceMonitor:
+  enabled: true
+  targets:
+    - name: prod
+      url: https://alligator-one.ru
+      module: http_2xx
+    - name: test
+      url: https://test.alligator-one.ru
+      module: http_2xx

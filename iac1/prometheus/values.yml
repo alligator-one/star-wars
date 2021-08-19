@@ -1,0 +1,19 @@
+prometheus:
+  prometheusSpec:
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: managed-premium
+          accessModes: [ "ReadWriteOnce" ]
+          resources:
+            requests:
+              storage: 15Gi
+    serviceMonitorSelector:
+      matchLabels: {}
+
+grafana:
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    hosts:
+      - metrics.alligator-one.ru
